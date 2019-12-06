@@ -60,5 +60,6 @@ int main()
     average= sum/n;
     printf("average: %.2lf", average);
     printf("\nminimum of array is : %d",a[(minimum(a,n,1))]);
+    printf("\nmaximum of array is : %d",a[(maximum(a,n,1))]);
 
 }
