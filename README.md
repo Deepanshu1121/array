@@ -11,6 +11,38 @@ int Sum_Number(int a[], int n)
 
 }
 
+int minimum(int a[],int n,int i)
+ {
+ 	static int min=0;;
+ 	   if(i<n)
+       {
+       	if(a[min]>a[i])
+       	 {
+			      min=i;
+			      minimum(a,n,++i);
+
+        }
+	   }
+
+        return min;
+
+ }
+ int maximum(int a[],int n,int i)
+ {
+ 	   	static int max=0;;
+ 	   if(i<n)
+       {
+       	if(a[max]<a[i])
+       	 {
+			      max=i;
+			      maximum(a,n,++i);
+
+        }
+	   }
+
+        return max;
+ }
+
 int main()
 {
     int a[10],i,n,sum;
@@ -27,5 +59,6 @@ int main()
     printf("sum of array is :%d\n",sum);
     average= sum/n;
     printf("average: %.2lf", average);
+    printf("\nminimum of array is : %d",a[(minimum(a,n,1))]);
 
 }
